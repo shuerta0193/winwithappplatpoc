@@ -15,10 +15,13 @@ jobs:
           dotnet-version: 6.0.x
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: ./Humongous.Healthcare
       - name: Build
         run: dotnet build --no-restore
+        working-directory: ./Humongous.Healthcare
       - name: Test
         run: dotnet test --no-build --verbosity normal
+        working-directory: ./Humongous.Healthcare
 
   deploy:
 
@@ -35,7 +38,7 @@ jobs:
     - name: Build and deploy Container App
       uses: azure/container-apps-deploy-action@v0
       with:
-        appSourcePath: ./Humongous.Healthcare/
+        appSourcePath: ./Humongous.Healthcare
         acrName: mytestacr
         acrUsername: ${{ secrets.REGISTRY_USERNAME }}
         acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
