@@ -38,7 +38,7 @@ jobs:
     - name: Build and deploy Container App
       uses: azure/container-apps-deploy-action@v0
       with:
-        appSourcePath: ./Humongous.Healthcare
+        appSourcePath: ${{ github.workspace }}
         acrName: winappacr
         acrUsername: ${{ secrets.REGISTRY_USERNAME }}
         acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
