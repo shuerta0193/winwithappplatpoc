@@ -43,4 +43,4 @@ jobs:
         acrUsername: ${{ secrets.REGISTRY_USERNAME }}
         acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
         resourceGroup: RG-TAW
-        #runtimeStack: 'dotnetcore:7.0'
+        runtimeStack: 'dotnetcore:6.0'
