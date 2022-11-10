@@ -34,6 +34,7 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - uses: actions/checkout@v3
 
     - name: Build and deploy Container App
       uses: azure/container-apps-deploy-action@v0
