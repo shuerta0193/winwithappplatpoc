@@ -42,3 +42,5 @@ jobs:
         acrName: winappacr
         acrUsername: ${{ secrets.REGISTRY_USERNAME }}
         acrPassword: ${{ secrets.REGISTRY_PASSWORD }}
+        resourceGroup: RG-TAW
+        runtimeStack: 'dotnetcore:7.0'
